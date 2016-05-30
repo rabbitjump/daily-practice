@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	//点击提交功能
-	$('input').click(function(){
+	$('input').click(commentSubmit);
+	function commentSubmit() {
 	var content = $('#comment').val();//获取输入内容
 	var p_length = $("p").length;//总评论数
-	if (content.length>0 & content.length<=5) {//输入不为空且小于500字。
+	if (content.length>0 & content.length<=5) {//输入不为空且小于5个字。
 		if (content.match(/^\s+$/g)) {//内空不能全为空格
 			alert("请输入评论内容");
 		}
@@ -23,7 +24,9 @@ $(document).ready(function(){
 	else {
 		alert("请输入评论内容");
 	};
-  });
+  }
+
+
 
 
 
