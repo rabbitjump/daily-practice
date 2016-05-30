@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>哦</title>
-	<meta charset = "utf-8">
-
-</head>
-<body>
-<h1>你觉得明天哪个股票会涨停？</h1>
-<textarea id="comment"></textarea>
-
-<input type="button" value="提交评论" />
-
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
-
-<script>
 $(document).ready(function(){
 	//点击提交功能
 	$('input').click(function(){
@@ -39,13 +23,8 @@ $(document).ready(function(){
 	else {
 		alert("请输入评论内容");
 	};
-
   });
 
 
 
 });
-</script>
-
-</body>
-</html>
