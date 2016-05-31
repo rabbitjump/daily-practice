@@ -7,10 +7,19 @@
 </head>
 <body>
 <h1>你觉得明天哪个股票会涨停？</h1>
-<textarea id="comment"></textarea>
 
-<input type="button" value="提交评论" />
+<div class="boardHead">
+	<h2>评论</h2>
+	<span>共<b class="count">0</b>条评论</span>
+</div>
 
+<ul class="board"></ul>
+
+<textarea id="comment" rows="10" cols="50"></textarea>
+
+<div>
+	<input type="button" value="提交评论" />
+</div>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 
 <script src=model.js></script>
