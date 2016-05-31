@@ -7,9 +7,14 @@ $(document).ready(function(){
 			var li_length = $("li").length;//总评论数
 			var time = new Date();//当前时间
 			var goodBad = function(){//点赞函数
-				var count = $(this).find("span").text();//为什么用$(this).eq(1)不行？
-				$(this).find("span").text(parseInt(count)+1);
-
+				var count = parseInt($(this).find("span").text());//为什么用$(this).eq(1)不行？
+				if (count<99) {//超过99个赞显示为99+
+					$(this).find("span").text(++count);
+				}
+				else {
+					count++;
+					$(this).find("span").text("99+");
+				}
 			}
 			if (content.length>0 & content.length<=maxwords) {//输入不为空且小于5个字。
 				if (content.match(/^\s+$/g)) {//内空不能全为空格
